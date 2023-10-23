@@ -1,48 +1,9 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php get_header(); ?>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Главная</title>
-
-	<!-- favicons -->
-<link rel="apple-touch-icon" sizes="57x57" href="/img/favicon.svg">
-<link rel="apple-touch-icon" sizes="60x60" href="/img/favicon.svg">
-<link rel="apple-touch-icon" sizes="72x72" href="/img/favicon.svg">
-<link rel="apple-touch-icon" sizes="76x76" href="/img/favicon.svg">
-<link rel="apple-touch-icon" sizes="114x114" href="/img/favicon.svg">
-<link rel="apple-touch-icon" sizes="120x120" href="/img/favicon.svg">
-<link rel="apple-touch-icon" sizes="144x144" href="/img/favicon.svg">
-<link rel="apple-touch-icon" sizes="152x152" href="/img/favicon.svg">
-<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.svg">
-<link rel="icon" type="image/png" sizes="192x192" href="/img/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon.svg">
-<link rel="icon" type="image/png" sizes="96x96" href="/img/favicon.svg">
-<link rel="icon" type="image/png" sizes="16x16" href="/img/favicon.svg">
-<link rel="shortcut icon" href="/img/favicon.svg" type="image/x-icon">
-<link rel="icon" href="/img/favicon.svg" type="image/x-icon">
-<meta name="msapplication-tilecolor" content="#fff">
-<meta name="msapplication-tileimage" content="/img/favicon.svg">
-
-<!-- CSS -->
-<!-- FANCYBOX -->
-<link href="css/fancybox.min.css" type="text/css" rel="stylesheet">
-<!-- SWIPER -->
-<link href="css/swiper-bundle.min.css" rel="stylesheet">
-<link href="css/style.min.css" type="text/css" rel="stylesheet">
-</head>
-
-<body>
-
-	
-
-	<main>
-
-		<section class="hero">
+<section class="hero">
   <div class="container">
     <div class="hero__container">
-      <h1 class="title-1">Organic <span>Trustpilot reviews</span> for&nbsp;your business</h1>
+      <h1 class="title-1"><?php the_field('hero_title'); ?></h1>
       <a href="/" class="logo">
         <svg width="190" height="40" viewBox="0 0 190 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M50.7609 30.1452C51.8267 30.543 53.0191 30.7419 54.338 30.7419C55.8035 30.7419 57.1358 30.4833 58.3348 29.9661C59.5339 29.4357 60.5664 28.6996 61.4324 27.7581C62.3117 26.8165 62.9911 25.7224 63.4708 24.4758C63.9504 23.2159 64.1902 21.8566 64.1902 20.3978C64.1902 18.4882 63.7705 16.7509 62.9312 15.186C62.1052 13.6211 60.9461 12.3745 59.454 11.4462C57.9751 10.5179 56.2565 10.0538 54.298 10.0538C52.4195 10.0538 50.8075 10.4516 49.4619 11.2473C48.4745 11.837 47.6152 12.5578 46.8839 13.4098V1.5H43.2268V30.1452H46.6042V27.0067C47.0035 27.5608 47.4631 28.0698 47.9831 28.5339C48.7691 29.2235 49.695 29.7606 50.7609 30.1452ZM57.1758 26.5844C56.1632 27.1547 54.9975 27.4398 53.6785 27.4398C52.3596 27.4398 51.1872 27.1547 50.1613 26.5844C49.1488 26.0009 48.3494 25.1853 47.7632 24.1376C47.177 23.0767 46.8839 21.8301 46.8839 20.3978C46.8839 18.9523 47.177 17.7057 47.7632 16.6581C48.3494 15.5971 49.1488 14.7815 50.1613 14.2113C51.1872 13.641 52.3596 13.3559 53.6785 13.3559C54.9975 13.3559 56.1632 13.641 57.1758 14.2113C58.2016 14.7815 59.001 15.5971 59.5739 16.6581C60.1601 17.7057 60.4532 18.9523 60.4532 20.3978C60.4532 21.8301 60.1601 23.0767 59.5739 24.1376C59.001 25.1853 58.2016 26.0009 57.1758 26.5844Z" fill="currentColor"/>
@@ -59,39 +20,39 @@
         </svg>
       </a>
     </div>
-    <div class="hero__bnr" style="background-image: url('/img/hero-bnr-img.jpg');">
+    <div class="hero__bnr" style="background-image: url('<?php the_field('hero_bnr_bg'); ?>');">
       <div class="hero__bnr-content">
-        <h2 class="title-2">Boost your company's online reputation with authentic reviews written by real people.</h2>
+        <h2 class="title-2"><?php the_field('hero_bnr_title'); ?></h2>
       </div>
-      <img src="/img/tp-logo-white.svg" class="hero__bnr-logo" alt=""/>
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tp-logo-white.svg" class="hero__bnr-logo" alt=""/>
     </div>
   </div>
 </section>
 
-		<section class="benefits">
+<section class="benefits">
   <div class="container">
-    <h2 class="title-1">Why choose our&nbsp;review service</h2>
+    <h2 class="title-1"><?php the_field('benefits_title'); ?></h2>
     <div class="benefits__list">
       <div class="benefits__item">
-        <div class="benefits__item-number">1</div>
-        <h3 class="title-2">Manage negative feedback</h3>
-        <p class="text">Help reduce the effects of negative reviews on your brand</p>
+        <div class="benefits__item-number"><?php the_field('benefit_1_number'); ?></div>
+        <h3 class="title-2"><?php the_field('benefit_1_title'); ?></h3>
+        <p class="text"><?php the_field('benefit_1_text'); ?></p>
       </div>
       <div class="benefits__item">
-        <div class="benefits__item-number">2</div>
-        <h3 class="title-2">Boost your company's rating</h3>
-        <p class="text">Stand out more compared to competitors</p>
+        <div class="benefits__item-number"><?php the_field('benefit_2_number'); ?></div>
+        <h3 class="title-2"><?php the_field('benefit_2_title'); ?></h3>
+        <p class="text"><?php the_field('benefit_2_text'); ?></p>
       </div>
       <div class="benefits__item">
-        <div class="benefits__item-number">3</div>
-        <h3 class="title-2">Increase customer trust</h3>
-        <p class="text">Show your customers that you're a trustworthy business</p>
+        <div class="benefits__item-number"><?php the_field('benefit_3_number'); ?></div>
+        <h3 class="title-2"><?php the_field('benefit_3_title'); ?></h3>
+        <p class="text"><?php the_field('benefit_3_text'); ?></p>
       </div>
     </div>
   </div>
 </section>
 
-		<section class="services">
+<section class="services">
   <div class="container">
     <div class="services__container">
       <div class="services__item">
@@ -176,7 +137,7 @@
   </div>
 </section>
 
-		<section class="sets">
+<section class="sets">
   <div class="container">
     <h2 class="title-1">What sets our&nbsp;reviews apart</h2>
     <div class="sets__list">
@@ -204,7 +165,7 @@
   </div>
 </section>
 
-		<section class="faq">
+<section class="faq">
   <div class="container">
     <h2 class="title-1">FAQ</h2>
     <div class="faq__list">
@@ -252,7 +213,7 @@
   </div>
 </section>
 
-		<section class="contacts">
+<section class="contacts">
   <div class="container">
     <h2 class="title-1">Contact us</h2>
     <div class="contacts__container">
@@ -290,213 +251,5 @@
     </div>
   </div>
 </section>
-		
-	</main>
 
-	<!--------Footer--------->
-<footer class="footer">
-  <div class="container footer__container">
-    <button data-fancybox href="#term-of-service" type="button" class="btn-reset">Terms of Service</button>
-    <button data-fancybox href="#refund-policy" type="button" class="btn-reset">Refund Policy</button>
-    <button data-fancybox href="#privacy-policy" type="button" class="btn-reset">Privacy Policy</button>
-    <p>© 2023 tpboost.io. All rights reserved.</p>
-  </div>
-</footer>
-	<div style="display: none;" class="modal modal-content" id="term-of-service">
-  <button type="button" data-fancybox-close class="modal-close" title="Close">
-    <span>Close</span>
-    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1.13636 0L0 1.13636L11.3636 12.5L0 23.8636L1.13636 25L12.5 13.6364L23.8636 25L25 23.8636L13.6364 12.5L25 1.13636L23.8636 0L12.5 11.3636L1.13636 0Z" fill="#00B67A"/>
-    </svg>      
-  </button>
-  <div class="modal-heading">
-    <h2 class="modal-title">Terms of Service</h2>
-  </div>
-  <!-- Swiper -->
-  <div class="swiper scroll-container termSwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus,
-            ex eu sagittis faucibus, ligula ipsum sagittis magna, et imperdiet
-            dolor lectus eu libero. Vestibulum venenatis eget turpis sed
-            faucibus. Maecenas in ullamcorper orci, eu ullamcorper sem. Etiam
-            elit ante, luctus non ante sit amet, sodales vulputate odio. Aenean
-            tristique nisl tellus, sit amet fringilla nisl volutpat cursus.
-            Quisque dignissim lectus ac nunc consectetur mattis. Proin vel
-            hendrerit ipsum, et lobortis dolor. Vestibulum convallis, nibh et
-            tincidunt tristique, nisl risus facilisis lectus, ut interdum orci
-            nisl ac nunc. Cras et aliquam felis. Quisque vel ipsum at elit
-            sodales posuere eget non est. Fusce convallis vestibulum dolor non
-            volutpat. Vivamus vestibulum quam ut ultricies pretium.
-          </p>
-          <p>
-            Suspendisse rhoncus fringilla nisl. Mauris eget lorem ac urna
-            consectetur convallis non vel mi. Donec libero dolor, volutpat ut
-            urna sit amet, aliquet molestie purus. Phasellus faucibus, leo vel
-            scelerisque lobortis, ipsum leo sollicitudin metus, eget sagittis
-            ante orci eu ipsum. Nulla ac mauris eu risus sagittis scelerisque
-            iaculis bibendum mauris. Cras ut egestas orci. Cras odio risus,
-            sagittis ut nunc vitae, aliquam consectetur purus. Vivamus ornare
-            nunc vel tellus facilisis, quis dictum elit tincidunt. Donec
-            accumsan nisi at laoreet sodales. Cras at ullamcorper massa.
-            Maecenas at facilisis ex. Nam mollis dignissim purus id efficitur.
-          </p>
-          <p>
-            Curabitur eget aliquam erat. Curabitur a neque vitae purus volutpat
-            elementum. Vivamus quis vestibulum leo, efficitur ullamcorper velit.
-            Integer tincidunt finibus metus vel porta. Mauris sed mauris congue,
-            pretium est nec, malesuada purus. Nulla hendrerit consectetur arcu
-            et lacinia. Suspendisse augue justo, convallis eget arcu in, pretium
-            tempor ligula. Nullam vulputate tincidunt est ut ullamcorper.
-          </p>
-          <p>
-            Curabitur sed sodales leo. Nulla facilisi. Etiam condimentum, nisi
-            id tempor vulputate, nisi justo cursus justo, pellentesque
-            condimentum diam arcu sit amet leo. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. In placerat
-            tellus a posuere vehicula. Donec diam massa, efficitur vitae mattis
-            et, pretium in augue. Fusce iaculis mi quis ante venenatis, sit amet
-            pellentesque orci aliquam. Vestibulum elementum posuere vehicula.
-          </p>
-          <p>
-            Sed tincidunt diam a massa pharetra faucibus. Praesent condimentum
-            id arcu nec fringilla. Maecenas faucibus, ante et venenatis
-            interdum, erat mi eleifend dui, at convallis nisl est nec arcu. Duis
-            vitae arcu rhoncus, faucibus magna ut, tempus metus. Cras in nibh
-            sed ipsum consequat rhoncus. Proin fringilla nulla ut augue tempor
-            fermentum. Nunc hendrerit non nisi vitae finibus. Donec eget ornare
-            libero. Aliquam auctor erat enim, a semper risus semper at. In ut
-            dui in metus tincidunt euismod eget et lacus. Aenean et dictum urna,
-            sed rhoncus lorem. Duis pharetra sagittis odio. Etiam a libero ut
-            nisi feugiat tincidunt vel vitae turpis. Maecenas vel orci sit amet
-            lorem hendrerit venenatis sollicitudin ut dui. Quisque rhoncus nibh
-            in massa pretium scelerisque.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In luctus,
-            ex eu sagittis faucibus, ligula ipsum sagittis magna, et imperdiet
-            dolor lectus eu libero. Vestibulum venenatis eget turpis sed
-            faucibus. Maecenas in ullamcorper orci, eu ullamcorper sem. Etiam
-            elit ante, luctus non ante sit amet, sodales vulputate odio. Aenean
-            tristique nisl tellus, sit amet fringilla nisl volutpat cursus.
-            Quisque dignissim lectus ac nunc consectetur mattis. Proin vel
-            hendrerit ipsum, et lobortis dolor. Vestibulum convallis, nibh et
-            tincidunt tristique, nisl risus facilisis lectus, ut interdum orci
-            nisl ac nunc. Cras et aliquam felis. Quisque vel ipsum at elit
-            sodales posuere eget non est. Fusce convallis vestibulum dolor non
-            volutpat. Vivamus vestibulum quam ut ultricies pretium.
-          </p>
-          <p>
-            Suspendisse rhoncus fringilla nisl. Mauris eget lorem ac urna
-            consectetur convallis non vel mi. Donec libero dolor, volutpat ut
-            urna sit amet, aliquet molestie purus. Phasellus faucibus, leo vel
-            scelerisque lobortis, ipsum leo sollicitudin metus, eget sagittis
-            ante orci eu ipsum. Nulla ac mauris eu risus sagittis scelerisque
-            iaculis bibendum mauris. Cras ut egestas orci. Cras odio risus,
-            sagittis ut nunc vitae, aliquam consectetur purus. Vivamus ornare
-            nunc vel tellus facilisis, quis dictum elit tincidunt. Donec
-            accumsan nisi at laoreet sodales. Cras at ullamcorper massa.
-            Maecenas at facilisis ex. Nam mollis dignissim purus id efficitur.
-          </p>
-          <p>
-            Curabitur eget aliquam erat. Curabitur a neque vitae purus volutpat
-            elementum. Vivamus quis vestibulum leo, efficitur ullamcorper velit.
-            Integer tincidunt finibus metus vel porta. Mauris sed mauris congue,
-            pretium est nec, malesuada purus. Nulla hendrerit consectetur arcu
-            et lacinia. Suspendisse augue justo, convallis eget arcu in, pretium
-            tempor ligula. Nullam vulputate tincidunt est ut ullamcorper.
-          </p>
-          <p>
-            Curabitur sed sodales leo. Nulla facilisi. Etiam condimentum, nisi
-            id tempor vulputate, nisi justo cursus justo, pellentesque
-            condimentum diam arcu sit amet leo. Cum sociis natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus. In placerat
-            tellus a posuere vehicula. Donec diam massa, efficitur vitae mattis
-            et, pretium in augue. Fusce iaculis mi quis ante venenatis, sit amet
-            pellentesque orci aliquam. Vestibulum elementum posuere vehicula.
-          </p>
-          <p>
-            Sed tincidunt diam a massa pharetra faucibus. Praesent condimentum
-            id arcu nec fringilla. Maecenas faucibus, ante et venenatis
-            interdum, erat mi eleifend dui, at convallis nisl est nec arcu. Duis
-            vitae arcu rhoncus, faucibus magna ut, tempus metus. Cras in nibh
-            sed ipsum consequat rhoncus. Proin fringilla nulla ut augue tempor
-            fermentum. Nunc hendrerit non nisi vitae finibus. Donec eget ornare
-            libero. Aliquam auctor erat enim, a semper risus semper at. In ut
-            dui in metus tincidunt euismod eget et lacus. Aenean et dictum urna,
-            sed rhoncus lorem. Duis pharetra sagittis odio. Etiam a libero ut
-            nisi feugiat tincidunt vel vitae turpis. Maecenas vel orci sit amet
-            lorem hendrerit venenatis sollicitudin ut dui. Quisque rhoncus nibh
-            in massa pretium scelerisque.
-          </p>
-      </div>
-    </div>
-    <div class="swiper-scrollbar"></div>
-  </div>
-</div>
-
-<div style="display: none;" class="modal modal-order" id="modal-order">
-  <button type="button" data-fancybox-close class="modal-close" title="Close">
-    <span>Close</span>
-    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1.13636 0L0 1.13636L11.3636 12.5L0 23.8636L1.13636 25L12.5 13.6364L23.8636 25L25 23.8636L13.6364 12.5L25 1.13636L23.8636 0L12.5 11.3636L1.13636 0Z" fill="#00B67A"/>
-    </svg>      
-  </button>
-  <div class="modal-heading">
-    <h2 class="modal-title">Order Details</h2>
-    <div class="order-details">
-      <p class="order-details-name">EU/USA reviews</p>
-      <div class="order-details-charact"><span>1</span><span>8 $</span></div>
-    </div>
-  </div>
-  <form class="form">
-    <div class="form-group">
-      <div class="form-title">Your name <sup>*</sup></div>
-      <input type="text" class="form-input" placeholder="Name">
-    </div>
-    <div class="form-group">
-      <div class="form-title">Contact Method <sup>*</sup></div>
-      <input type="text" class="form-input" placeholder="Telegram/WhatsApp ID">
-    </div>
-    <div class="form-group">
-      <div class="form-title">Trustpilot business link or site domain</div>
-      <input type="text" class="form-input" placeholder="https://www.trustpilot.com">
-    </div>
-    <div class="form-group">
-      <div class="form-title">Detailed information</div>
-      <textarea cols="30" rows="10" placeholder="..."></textarea>
-    </div>
-    <input type="submit" class="btn" value="Place Order">
-  </form>
-</div>
-
-<div style="display: none;" class="modal modal-order-yes" id="modal-order-yes">
-  <button type="button" data-fancybox-close class="modal-close" title="Close">
-    <span>Close</span>
-    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M1.13636 0L0 1.13636L11.3636 12.5L0 23.8636L1.13636 25L12.5 13.6364L23.8636 25L25 23.8636L13.6364 12.5L25 1.13636L23.8636 0L12.5 11.3636L1.13636 0Z" fill="#00B67A"/>
-    </svg>      
-  </button>
-  <div class="modal-heading">
-    <h2 class="title-1">The application <span>is&nbsp;complete</span></h2>
-    <p class="title-2">You will receive payment details
-      in the specified messenger</p>
-  </div>
-  <div class="modal-bottom">
-    <p class="title-2"><span>Thank you</span> for choosing tpboost.io</p>
-  </div>
-</div>
-
-	<!-- Script-->
-<script src="js/jquery-3.4.1.min.js"></script>
-<!-- Swiper JS -->
-<script src="js/swiper-bundle.min.js"></script>
-<!-- Fancybox -->
-<script src="js/fancybox.min.js"></script>
-
-<script src="js/app.min.js"></script>
-
-</body>
-
-</html>
+<?php get_footer(); ?>
