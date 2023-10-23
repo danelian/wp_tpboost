@@ -139,27 +139,27 @@
 
 <section class="sets">
   <div class="container">
-    <h2 class="title-1">What sets our&nbsp;reviews apart</h2>
+    <h2 class="title-1"><?php the_field('sets_title'); ?></h2>
     <div class="sets__list">
       <div class="sets__item">
-        <div class="sets__item-number">1</div>
-        <h3 class="title-2">Trusted service</h3>
-        <p class="text">Over 5 years in the market, we've helped companies gather over 200,000 reviews.</p>
+        <div class="sets__item-number"><?php the_field('set_1_number'); ?></div>
+        <h3 class="title-2"><?php the_field('set_1_title'); ?></h3>
+        <p class="text"><?php the_field('set_1_text'); ?></p>
       </div>
       <div class="sets__item">
-        <div class="sets__item-number">2</div>
-        <h3 class="title-2">Reviews That Stick</h3>
-        <p class="text">We make sure reviews stay up and don't get deleted</p>
+        <div class="sets__item-number"><?php the_field('set_2_number'); ?></div>
+        <h3 class="title-2"><?php the_field('set_2_title'); ?></h3>
+        <p class="text"><?php the_field('set_2_text'); ?></p>
       </div>
       <div class="sets__item">
-        <div class="sets__item-number">3</div>
-        <h3 class="title-2">Fast review delivery</h3>
-        <p class="text">We can post up to 30 Trustpilot reviews every day to help your business grow faster</p>
+        <div class="sets__item-number"><?php the_field('set_3_number'); ?></div>
+        <h3 class="title-2"><?php the_field('set_3_title'); ?></h3>
+        <p class="text"><?php the_field('set_3_text'); ?></p>
       </div>
       <div class="sets__item">
-        <div class="sets__item-number">4</div>
-        <h3 class="title-2">Customized reviews</h3>
-        <p class="text">Each review is uniquely crafted to suit your company's needs.</p>
+        <div class="sets__item-number"><?php the_field('set_4_number'); ?></div>
+        <h3 class="title-2"><?php the_field('set_4_title'); ?></h3>
+        <p class="text"><?php the_field('set_4_text'); ?></p>
       </div>
     </div>
   </div>
@@ -167,46 +167,46 @@
 
 <section class="faq">
   <div class="container">
-    <h2 class="title-1">FAQ</h2>
+    <h2 class="title-1"><?php the_field('faq_title'); ?></h2>
     <div class="faq__list">
       <div class="faq__list-left">
         <div class="faq__item">
-          <h3 class="title-2">What payment methods do you accept?</h3>
-          <p class="text">We accept all major cryptocurrencies and credit cards</p>
+          <h3 class="title-2"><?php the_field('faq_1_question'); ?></h3>
+          <p class="text"><?php the_field('faq_1_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">How are the reviews created?</h3>
-          <p class="text">Our adept copywriters draft the Trustpilot reviews, which are then sent for your approval. Alternatively, you can provide your own text.</p>
+          <h3 class="title-2"><?php the_field('faq_2_question'); ?></h3>
+          <p class="text"><?php the_field('faq_2_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">What names will the profiles use?</h3>
-          <p class="text">They will utilize genuine names consistent with your business's location and niche. You can also suggest preferred names if you have any in mind.</p>
+          <h3 class="title-2"><?php the_field('faq_3_question'); ?></h3>
+          <p class="text"><?php the_field('faq_3_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">How fast will the reviews be posted?</h3>
-          <p class="text">We can post up to 30 company reviews per day. You can indicate your preferred posting speed.</p>
+          <h3 class="title-2"><?php the_field('faq_4_question'); ?></h3>
+          <p class="text"><?php the_field('faq_4_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">Can you tailor services based on my requirements?</h3>
-          <p class="text">Certainly. Whether you need likes, comments, or reviews from any specific location globally, we're equipped to accommodate your needs.</p>
+          <h3 class="title-2"><?php the_field('faq_5_question'); ?></h3>
+          <p class="text"><?php the_field('faq_5_answer'); ?></p>
         </div>
       </div>
       <div class="faq__list-right">
         <div class="faq__item">
-          <h3 class="title-2">How soon will the review posting begin after payment?</h3>
-          <p class="text">Review posting will commence within 24 hours of successful payment</p>
+          <h3 class="title-2"><?php the_field('faq_6_question'); ?></h3>
+          <p class="text"><?php the_field('faq_6_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">Can I customize the reviews?</h3>
-          <p class="text">Absolutely. During the order process, specify any particular ratings or content you'd like to see in the reviews.</p>
+          <h3 class="title-2"><?php the_field('faq_7_question'); ?></h3>
+          <p class="text"><?php the_field('faq_7_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">What's the guarantee on the Trustpilot reviews?</h3>
-          <p class="text">We offer a 30-day guarantee from the post date. Should a review be removed within this timeframe, we'll replace it for free.</p>
+          <h3 class="title-2"><?php the_field('faq_8_question'); ?></h3>
+          <p class="text"><?php the_field('faq_8_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">Is there a chance the reviews could get deleted?</h3>
-          <p class="text">Our reviews boast a 99% stick rate. In the rare event of a deletion, notify us promptly, and we'll schedule a repost</p>
+          <h3 class="title-2"><?php the_field('faq_9_question'); ?></h3>
+          <p class="text"><?php the_field('faq_9_answer'); ?></p>
         </div>
       </div>
     </div>
