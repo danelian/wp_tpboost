@@ -29,3 +29,17 @@ function tpboost_scripts() {
 add_action('wp_enqueue_scripts', 'tpboost_scripts');
 
 
+function create_info_post_type() {
+  register_post_type( 'info',
+      array(
+          'labels' => array(
+              'name' => __( 'Информация' ),
+              'singular_name' => __( 'Информация' )
+          ),
+          'public' => true,
+          // 'has_archive' => true,
+          // 'rewrite' => array('slug' => 'info'),
+      )
+  );
+}
+add_action( 'init', 'create_info_post_type' );

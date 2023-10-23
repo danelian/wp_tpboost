@@ -565,6 +565,12 @@ th {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0 30px 0 0;
+  font-size: 22px !important;
+  font-style: normal;
+  font-weight: 100;
+  line-height: 1.3 !important;
+  letter-spacing: -0.88px !important;
+  color: var(--font-color) !important;
 }
 .scroll-container .swiper-slide p {
   margin-top: 0;
@@ -578,6 +584,9 @@ th {
 }
 .scroll-container .swiper-slide p:not(:last-child) {
   margin-bottom: 20px;
+}
+.scroll-container ol>li {
+  margin-bottom: 16px;
 }
 
 /* SWIPER SCROLLBAR */
