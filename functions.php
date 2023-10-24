@@ -37,9 +37,9 @@ function create_info_post_type() {
               'singular_name' => __( 'Информация' )
           ),
           'public' => true,
-          // 'has_archive' => true,
-          // 'rewrite' => array('slug' => 'info'),
       )
   );
 }
 add_action( 'init', 'create_info_post_type' );
+
+?>

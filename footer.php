@@ -108,25 +108,9 @@
         <div class="order-details-charact"><span>1</span><span>8 $</span></div>
       </div>
     </div>
-    <form class="form">
-      <div class="form-group">
-        <div class="form-title">Your name <sup>*</sup></div>
-        <input type="text" class="form-input" placeholder="Name">
-      </div>
-      <div class="form-group">
-        <div class="form-title">Contact Method <sup>*</sup></div>
-        <input type="text" class="form-input" placeholder="Telegram/WhatsApp ID">
-      </div>
-      <div class="form-group">
-        <div class="form-title">Trustpilot business link or site domain</div>
-        <input type="text" class="form-input" placeholder="https://www.trustpilot.com">
-      </div>
-      <div class="form-group">
-        <div class="form-title">Detailed information</div>
-        <textarea cols="30" rows="10" placeholder="..."></textarea>
-      </div>
-      <input type="submit" class="btn" value="Place Order">
-    </form>
+    <div class="form">
+      <?php echo do_shortcode('[contact-form-7 id="fa5fe38" title="Order Form"]'); ?>
+    </div>
   </div>
 
   <div style="display: none;" class="modal modal-order-yes" id="modal-order-yes">

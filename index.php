@@ -3,7 +3,7 @@
 <section class="hero">
   <div class="container">
     <div class="hero__container">
-      <h1 class="title-1">Organic <span>Trustpilot reviews</span> for&nbsp;your business</h1>
+      <h1 class="title-1"><?php the_field('hero_title'); ?></h1>
       <a href="/" class="logo">
         <svg width="190" height="40" viewBox="0 0 190 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M50.7609 30.1452C51.8267 30.543 53.0191 30.7419 54.338 30.7419C55.8035 30.7419 57.1358 30.4833 58.3348 29.9661C59.5339 29.4357 60.5664 28.6996 61.4324 27.7581C62.3117 26.8165 62.9911 25.7224 63.4708 24.4758C63.9504 23.2159 64.1902 21.8566 64.1902 20.3978C64.1902 18.4882 63.7705 16.7509 62.9312 15.186C62.1052 13.6211 60.9461 12.3745 59.454 11.4462C57.9751 10.5179 56.2565 10.0538 54.298 10.0538C52.4195 10.0538 50.8075 10.4516 49.4619 11.2473C48.4745 11.837 47.6152 12.5578 46.8839 13.4098V1.5H43.2268V30.1452H46.6042V27.0067C47.0035 27.5608 47.4631 28.0698 47.9831 28.5339C48.7691 29.2235 49.695 29.7606 50.7609 30.1452ZM57.1758 26.5844C56.1632 27.1547 54.9975 27.4398 53.6785 27.4398C52.3596 27.4398 51.1872 27.1547 50.1613 26.5844C49.1488 26.0009 48.3494 25.1853 47.7632 24.1376C47.177 23.0767 46.8839 21.8301 46.8839 20.3978C46.8839 18.9523 47.177 17.7057 47.7632 16.6581C48.3494 15.5971 49.1488 14.7815 50.1613 14.2113C51.1872 13.641 52.3596 13.3559 53.6785 13.3559C54.9975 13.3559 56.1632 13.641 57.1758 14.2113C58.2016 14.7815 59.001 15.5971 59.5739 16.6581C60.1601 17.7057 60.4532 18.9523 60.4532 20.3978C60.4532 21.8301 60.1601 23.0767 59.5739 24.1376C59.001 25.1853 58.2016 26.0009 57.1758 26.5844Z" fill="currentColor"/>
@@ -20,33 +20,33 @@
         </svg>
       </a>
     </div>
-    <div class="hero__bnr" style="background-image: url('/img/hero-bnr-img.jpg');">
+    <div class="hero__bnr" style="background-image: url('<?php the_field('hero_bnr_bg'); ?>');">
       <div class="hero__bnr-content">
-        <h2 class="title-2">Boost your company's online reputation with authentic reviews written by real people.</h2>
+        <h2 class="title-2"><?php the_field('hero_bnr_title'); ?></h2>
       </div>
-      <img src="/img/tp-logo-white.svg" class="hero__bnr-logo" alt=""/>
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tp-logo-white.svg" class="hero__bnr-logo" alt=""/>
     </div>
   </div>
 </section>
 
 <section class="benefits">
   <div class="container">
-    <h2 class="title-1">Why choose our&nbsp;review service</h2>
+    <h2 class="title-1"><?php the_field('benefits_title'); ?></h2>
     <div class="benefits__list">
       <div class="benefits__item">
-        <div class="benefits__item-number">1</div>
-        <h3 class="title-2">Manage negative feedback</h3>
-        <p class="text">Help reduce the effects of negative reviews on your brand</p>
+        <div class="benefits__item-number"><?php the_field('benefit_1_number'); ?></div>
+        <h3 class="title-2"><?php the_field('benefit_1_title'); ?></h3>
+        <p class="text"><?php the_field('benefit_1_text'); ?></p>
       </div>
       <div class="benefits__item">
-        <div class="benefits__item-number">2</div>
-        <h3 class="title-2">Boost your company's rating</h3>
-        <p class="text">Stand out more compared to competitors</p>
+        <div class="benefits__item-number"><?php the_field('benefit_2_number'); ?></div>
+        <h3 class="title-2"><?php the_field('benefit_2_title'); ?></h3>
+        <p class="text"><?php the_field('benefit_2_text'); ?></p>
       </div>
       <div class="benefits__item">
-        <div class="benefits__item-number">3</div>
-        <h3 class="title-2">Increase customer trust</h3>
-        <p class="text">Show your customers that you're a trustworthy business</p>
+        <div class="benefits__item-number"><?php the_field('benefit_3_number'); ?></div>
+        <h3 class="title-2"><?php the_field('benefit_3_title'); ?></h3>
+        <p class="text"><?php the_field('benefit_3_text'); ?></p>
       </div>
     </div>
   </div>
@@ -56,82 +56,82 @@
   <div class="container">
     <div class="services__container">
       <div class="services__item">
-        <div class="services__item-bnr" style="background-image: url('/img/geo-mixed-bg.jpg');">
-          <h2 class="title-1">EU/USA geo mixed reviews</h3>
+        <div class="services__item-bnr" style="background-image: url('<?php the_field('service1_image'); ?>');">
+          <h2 class="title-1"><?php the_field('service1_title'); ?></h2>
           <h3 class="title-1"><span>8 $</span> per 1</h3>
         </div>
         <div class="radio__btns">
           <label for="gm1" class="radio">
-            <input type="radio" id="gm1" name="gm" checked>
-            <span>1</span>
-            <span>8 $</span>
+            <input type="radio" id="gm1" name="gmt" checked>
+            <span><?php the_field('gm_1_kolvo'); ?></span>
+            <span><?php the_field('gm_1_price'); ?></span>
           </label>
           <label for="gm3" class="radio">
-            <input type="radio" id="gm3" name="gm">
-            <span>3</span>
-            <span>24 $</span>
+            <input type="radio" id="gm3" name="gmt">
+            <span><?php the_field('gm_3_kolvo'); ?></span>
+            <span><?php the_field('gm_3_price'); ?></span>
           </label>
           <label for="gm5" class="radio">
-            <input type="radio" id="gm5" name="gm">
-            <span>5</span>
-            <span>40 $</span>
+            <input type="radio" id="gm5" name="gmt">
+            <span><?php the_field('gm_5_kolvo'); ?></span>
+            <span><?php the_field('gm_5_price'); ?></span>
           </label>
           <label for="gm10" class="radio">
-            <input type="radio" id="gm10" name="gm">
-            <span>10</span>
-            <span>80 $</span>
+            <input type="radio" id="gm10" name="gmt">
+            <span><?php the_field('gm_10_kolvo'); ?></span>
+            <span><?php the_field('gm_10_price'); ?></span>
           </label>
           <label for="gm25" class="radio">
-            <input type="radio" id="gm25" name="gm">
-            <span>25</span>
-            <span>200 $</span>
+            <input type="radio" id="gm25" name="gmt">
+            <span><?php the_field('gm_25_kolvo'); ?></span>
+            <span><?php the_field('gm_25_price'); ?></span>
           </label>
           <label for="gm100" class="radio">
-            <input type="radio" id="gm100" name="gm">
-            <span>100</span>
-            <span>800 $</span>
+            <input type="radio" id="gm100" name="gmt">
+            <span><?php the_field('gm_100_kolvo'); ?></span>
+            <span><?php the_field('gm_100_price'); ?></span>
           </label>
         </div>
         <button data-fancybox href="#modal-order" class="btn" type="button">Place order</button>
       </div>
       <div class="services__item">
-        <div class="services__item-bnr" style="background-image: url('/img/geo-targeted-bg.jpg');">
-          <h2 class="title-1">Geo-Targeted reviews</h3>
+        <div class="services__item-bnr" style="background-image: url('<?php the_field('service2_image'); ?>');">
+          <h2 class="title-1"><?php the_field('service2_title'); ?></h2>
           <h3 class="title-1"><span>20 $</span> per 1</h3>
         </div>
         <div class="radio__btns">
-          <label for="gt1" class="radio">
-            <input type="radio" id="gt1" name="gt" checked>
-            <span>1</span>
-            <span>20 $</span>
+        <label for="gt1" class="radio">
+            <input type="radio" id="gt1" name="gmt">
+            <span><?php the_field('gt_1_kolvo'); ?></span>
+            <span><?php the_field('gt_1_price'); ?></span>
           </label>
           <label for="gt3" class="radio">
-            <input type="radio" id="gt3" name="gt">
-            <span>3</span>
-            <span>60 $</span>
+            <input type="radio" id="gt3" name="gmt">
+            <span><?php the_field('gt_3_kolvo'); ?></span>
+            <span><?php the_field('gt_3_price'); ?></span>
           </label>
           <label for="gt5" class="radio">
-            <input type="radio" id="gt5" name="gt">
-            <span>5</span>
-            <span>100 $</span>
+            <input type="radio" id="gt5" name="gmt">
+            <span><?php the_field('gt_5_kolvo'); ?></span>
+            <span><?php the_field('gt_5_price'); ?></span>
           </label>
           <label for="gt10" class="radio">
-            <input type="radio" id="gt10" name="gt">
-            <span>10</span>
-            <span>200 $</span>
+            <input type="radio" id="gt10" name="gmt">
+            <span><?php the_field('gt_10_kolvo'); ?></span>
+            <span><?php the_field('gt_10_price'); ?></span>
           </label>
           <label for="gt25" class="radio">
-            <input type="radio" id="gt25" name="gt">
-            <span>25</span>
-            <span>500 $</span>
+            <input type="radio" id="gt25" name="gmt">
+            <span><?php the_field('gt_25_kolvo'); ?></span>
+            <span><?php the_field('gt_25_price'); ?></span>
           </label>
           <label for="gt100" class="radio">
-            <input type="radio" id="gt100" name="gt">
-            <span>100</span>
-            <span>2000 $</span>
+            <input type="radio" id="gt100" name="gmt">
+            <span><?php the_field('gt_100_kolvo'); ?></span>
+            <span><?php the_field('gt_100_price'); ?></span>
           </label>
         </div>
-        <button data-fancybox href="#modal-order-yes" class="btn" type="button">Place order</button>
+        <button data-fancybox href="#modal-order" class="btn" type="button">Place order</button>
       </div>
     </div>
   </div>
@@ -139,27 +139,27 @@
 
 <section class="sets">
   <div class="container">
-    <h2 class="title-1">What sets our&nbsp;reviews apart</h2>
+    <h2 class="title-1"><?php the_field('sets_title'); ?></h2>
     <div class="sets__list">
       <div class="sets__item">
-        <div class="sets__item-number">1</div>
-        <h3 class="title-2">Trusted service</h3>
-        <p class="text">Over 5 years in the market, we've helped companies gather over 200,000 reviews.</p>
+        <div class="sets__item-number"><?php the_field('set_1_number'); ?></div>
+        <h3 class="title-2"><?php the_field('set_1_title'); ?></h3>
+        <p class="text"><?php the_field('set_1_text'); ?></p>
       </div>
       <div class="sets__item">
-        <div class="sets__item-number">2</div>
-        <h3 class="title-2">Reviews That Stick</h3>
-        <p class="text">We make sure reviews stay up and don't get deleted</p>
+        <div class="sets__item-number"><?php the_field('set_2_number'); ?></div>
+        <h3 class="title-2"><?php the_field('set_2_title'); ?></h3>
+        <p class="text"><?php the_field('set_2_text'); ?></p>
       </div>
       <div class="sets__item">
-        <div class="sets__item-number">3</div>
-        <h3 class="title-2">Fast review delivery</h3>
-        <p class="text">We can post up to 30 Trustpilot reviews every day to help your business grow faster</p>
+        <div class="sets__item-number"><?php the_field('set_3_number'); ?></div>
+        <h3 class="title-2"><?php the_field('set_3_title'); ?></h3>
+        <p class="text"><?php the_field('set_3_text'); ?></p>
       </div>
       <div class="sets__item">
-        <div class="sets__item-number">4</div>
-        <h3 class="title-2">Customized reviews</h3>
-        <p class="text">Each review is uniquely crafted to suit your company's needs.</p>
+        <div class="sets__item-number"><?php the_field('set_4_number'); ?></div>
+        <h3 class="title-2"><?php the_field('set_4_title'); ?></h3>
+        <p class="text"><?php the_field('set_4_text'); ?></p>
       </div>
     </div>
   </div>
@@ -167,46 +167,46 @@
 
 <section class="faq">
   <div class="container">
-    <h2 class="title-1">FAQ</h2>
+    <h2 class="title-1"><?php the_field('faq_title'); ?></h2>
     <div class="faq__list">
       <div class="faq__list-left">
         <div class="faq__item">
-          <h3 class="title-2">What payment methods do you accept?</h3>
-          <p class="text">We accept all major cryptocurrencies and credit cards</p>
+          <h3 class="title-2"><?php the_field('faq_1_question'); ?></h3>
+          <p class="text"><?php the_field('faq_1_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">How are the reviews created?</h3>
-          <p class="text">Our adept copywriters draft the Trustpilot reviews, which are then sent for your approval. Alternatively, you can provide your own text.</p>
+          <h3 class="title-2"><?php the_field('faq_2_question'); ?></h3>
+          <p class="text"><?php the_field('faq_2_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">What names will the profiles use?</h3>
-          <p class="text">They will utilize genuine names consistent with your business's location and niche. You can also suggest preferred names if you have any in mind.</p>
+          <h3 class="title-2"><?php the_field('faq_3_question'); ?></h3>
+          <p class="text"><?php the_field('faq_3_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">How fast will the reviews be posted?</h3>
-          <p class="text">We can post up to 30 company reviews per day. You can indicate your preferred posting speed.</p>
+          <h3 class="title-2"><?php the_field('faq_4_question'); ?></h3>
+          <p class="text"><?php the_field('faq_4_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">Can you tailor services based on my requirements?</h3>
-          <p class="text">Certainly. Whether you need likes, comments, or reviews from any specific location globally, we're equipped to accommodate your needs.</p>
+          <h3 class="title-2"><?php the_field('faq_5_question'); ?></h3>
+          <p class="text"><?php the_field('faq_5_answer'); ?></p>
         </div>
       </div>
       <div class="faq__list-right">
         <div class="faq__item">
-          <h3 class="title-2">How soon will the review posting begin after payment?</h3>
-          <p class="text">Review posting will commence within 24 hours of successful payment</p>
+          <h3 class="title-2"><?php the_field('faq_6_question'); ?></h3>
+          <p class="text"><?php the_field('faq_6_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">Can I customize the reviews?</h3>
-          <p class="text">Absolutely. During the order process, specify any particular ratings or content you'd like to see in the reviews.</p>
+          <h3 class="title-2"><?php the_field('faq_7_question'); ?></h3>
+          <p class="text"><?php the_field('faq_7_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">What's the guarantee on the Trustpilot reviews?</h3>
-          <p class="text">We offer a 30-day guarantee from the post date. Should a review be removed within this timeframe, we'll replace it for free.</p>
+          <h3 class="title-2"><?php the_field('faq_8_question'); ?></h3>
+          <p class="text"><?php the_field('faq_8_answer'); ?></p>
         </div>
         <div class="faq__item">
-          <h3 class="title-2">Is there a chance the reviews could get deleted?</h3>
-          <p class="text">Our reviews boast a 99% stick rate. In the rare event of a deletion, notify us promptly, and we'll schedule a repost</p>
+          <h3 class="title-2"><?php the_field('faq_9_question'); ?></h3>
+          <p class="text"><?php the_field('faq_9_answer'); ?></p>
         </div>
       </div>
     </div>
@@ -215,38 +215,44 @@
 
 <section class="contacts">
   <div class="container">
-    <h2 class="title-1">Contact us</h2>
+    <h2 class="title-1"><?php the_field('contacts_title'); ?></h2>
     <div class="contacts__container">
       <div class="contacts__left">
-        <h3 class="title-2">Engage with our specialists directly</h3>
-        <p class="text">Utilize the chat feature in the bottom right corner or connect with us through your preferred method of communication</p>
+        <h3 class="title-2"><?php the_field('contacts_subtitle'); ?></h3>
+        <p class="text"><?php the_field('contacts_text'); ?></p>
       </div>
       <div class="contacts__right">
-        <a href="#" class="btn-withicon">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_206_31)">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.629 1.22261C25.9062 1.44687 26.043 1.80173 25.9881 2.154L22.5595 24.154C22.5061 24.4966 22.279 24.7872 21.9594 24.9217C21.6398 25.0562 21.2733 25.0156 20.9909 24.8143L10.7052 17.4809C10.486 17.3247 10.3391 17.0866 10.2976 16.8206C10.2562 16.5547 10.3237 16.2832 10.485 16.0677L13.4981 12.0397L8.43768 15.6476C8.12831 15.8682 7.72066 15.8944 7.38561 15.7152L0.528468 12.0485C0.183078 11.8638 -0.0226974 11.4945 0.00199898 11.1036C0.0266954 10.7127 0.277317 10.3722 0.643205 10.2325L24.6432 1.06583C24.9763 0.938624 25.3519 0.998357 25.629 1.22261ZM3.40486 11.3186L7.78169 13.659L17.5623 6.68577C17.9636 6.39967 18.5135 6.44859 18.858 6.80104C19.2025 7.15349 19.2388 7.70437 18.9436 8.09901L12.6993 16.4464L20.8328 22.2453L23.7465 3.54924L3.40486 11.3186Z" fill="currentColor"/>
-            </g>
-            <defs>
-            <clipPath id="clip0_206_31">
-            <rect width="26" height="26" fill="white"/>
-            </clipPath>
-            </defs>
-          </svg>            
-          Telegram
-        </a>
-        <a href="#" class="btn-withicon">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75702e-05 13C2.75702e-05 5.8203 5.82033 0 13 0C20.1797 0 26 5.8203 26 13C26 20.1797 20.1797 26 13 26C10.2988 26 7.78785 25.1751 5.7083 23.7639L1.44724 25.8944C1.06225 26.0869 0.597281 26.0115 0.292921 25.7071C-0.0114395 25.4027 -0.086894 24.9378 0.1056 24.5528L2.23613 20.2917C0.824885 18.2122 2.75702e-05 15.7012 2.75702e-05 13ZM13 2C6.9249 2 2.00003 6.92487 2.00003 13C2.00003 15.4778 2.81806 17.7616 4.1992 19.6001L4.57074 20.0946L3.2361 22.7639L5.90539 21.4293L6.39996 21.8008C8.23843 23.182 10.5223 24 13 24C19.0752 24 24 19.0751 24 13C24 6.92487 19.0752 2 13 2ZM8.85717 8.39924V9.57143C8.85717 10.2495 8.9463 10.9067 9.11348 11.532L9.80877 11.0685C10.0427 10.9126 10.1633 10.634 10.1171 10.3568L9.87807 8.92247C9.79802 8.44215 9.27749 8.18966 8.85717 8.39924ZM9.90127 13.4105L10.9182 12.7326C11.8069 12.1401 12.2655 11.0815 12.0899 10.028L11.8509 8.59367C11.5271 6.65083 9.30674 5.68892 7.6679 6.78148C7.6679 6.78147 7.6679 6.78148 7.6679 6.78148L7.30247 7.02509C7.02427 7.21056 6.85717 7.52279 6.85717 7.85714V9.57143C6.85717 14.8576 11.1424 19.1429 16.4286 19.1429H18.1429C18.4772 19.1429 18.7895 18.9758 18.9749 18.6975L19.2185 18.3321C20.3111 16.6933 19.3492 14.473 17.4064 14.1492L15.9721 13.9101C14.9185 13.7345 13.8599 14.1931 13.2674 15.0819L12.5895 16.0988C11.4815 15.4457 10.5544 14.5185 9.90127 13.4105ZM14.468 16.8865C15.0933 17.0537 15.7506 17.1429 16.4286 17.1429H17.6008C17.8104 16.7225 17.5579 16.202 17.0776 16.122L15.6433 15.8829C15.366 15.8367 15.0874 15.9574 14.9315 16.1913L14.468 16.8865Z" fill="currentColor"/>
-          </svg>
-          Whatsapp
-        </a>
-        <a href="#" class="btn-withicon">
-          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.71429C0 1.214 1.214 0 2.71429 0H23.2857C24.786 0 26 1.214 26 2.71429V18.1429C26 19.6431 24.786 20.8571 23.2857 20.8571H16.9638L13.8321 25.5547C13.6466 25.8329 13.3344 26 13 26C12.6656 26 12.3534 25.8329 12.1679 25.5547L9.03624 20.8571H2.71429C1.214 20.8571 0 19.6431 0 18.1429V2.71429ZM2.71429 2C2.31857 2 2 2.31857 2 2.71429V18.1429C2 18.5386 2.31857 18.8571 2.71429 18.8571H9.57143C9.90578 18.8571 10.218 19.0242 10.4035 19.3024L13 23.1972L15.5965 19.3024C15.782 19.0242 16.0942 18.8571 16.4286 18.8571H23.2857C23.6814 18.8571 24 18.5386 24 18.1429V2.71429C24 2.31857 23.6814 2 23.2857 2H2.71429ZM19 8.86162H7V6.86162H19V8.86162ZM17.2857 14.0078H8.71429V12.0078H17.2857V14.0078Z" fill="currentColor"/>
-          </svg>
-          Chat
-        </a>
+        <?php if (get_field('telegram_link')) { ?>
+          <a href="<?php the_field('telegram_link') ?>" target="_blank" class="btn-withicon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_206_31)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M25.629 1.22261C25.9062 1.44687 26.043 1.80173 25.9881 2.154L22.5595 24.154C22.5061 24.4966 22.279 24.7872 21.9594 24.9217C21.6398 25.0562 21.2733 25.0156 20.9909 24.8143L10.7052 17.4809C10.486 17.3247 10.3391 17.0866 10.2976 16.8206C10.2562 16.5547 10.3237 16.2832 10.485 16.0677L13.4981 12.0397L8.43768 15.6476C8.12831 15.8682 7.72066 15.8944 7.38561 15.7152L0.528468 12.0485C0.183078 11.8638 -0.0226974 11.4945 0.00199898 11.1036C0.0266954 10.7127 0.277317 10.3722 0.643205 10.2325L24.6432 1.06583C24.9763 0.938624 25.3519 0.998357 25.629 1.22261ZM3.40486 11.3186L7.78169 13.659L17.5623 6.68577C17.9636 6.39967 18.5135 6.44859 18.858 6.80104C19.2025 7.15349 19.2388 7.70437 18.9436 8.09901L12.6993 16.4464L20.8328 22.2453L23.7465 3.54924L3.40486 11.3186Z" fill="currentColor"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_206_31">
+                <rect width="26" height="26" fill="white"/>
+                </clipPath>
+                </defs>
+            </svg>            
+            Telegram
+          </a>
+         <?php } ?>
+         <?php if (get_field('whatsapp_link')) { ?>
+          <a href="<?php the_field('whatsapp_link'); ?>" target="_blank" class="btn-withicon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M2.75702e-05 13C2.75702e-05 5.8203 5.82033 0 13 0C20.1797 0 26 5.8203 26 13C26 20.1797 20.1797 26 13 26C10.2988 26 7.78785 25.1751 5.7083 23.7639L1.44724 25.8944C1.06225 26.0869 0.597281 26.0115 0.292921 25.7071C-0.0114395 25.4027 -0.086894 24.9378 0.1056 24.5528L2.23613 20.2917C0.824885 18.2122 2.75702e-05 15.7012 2.75702e-05 13ZM13 2C6.9249 2 2.00003 6.92487 2.00003 13C2.00003 15.4778 2.81806 17.7616 4.1992 19.6001L4.57074 20.0946L3.2361 22.7639L5.90539 21.4293L6.39996 21.8008C8.23843 23.182 10.5223 24 13 24C19.0752 24 24 19.0751 24 13C24 6.92487 19.0752 2 13 2ZM8.85717 8.39924V9.57143C8.85717 10.2495 8.9463 10.9067 9.11348 11.532L9.80877 11.0685C10.0427 10.9126 10.1633 10.634 10.1171 10.3568L9.87807 8.92247C9.79802 8.44215 9.27749 8.18966 8.85717 8.39924ZM9.90127 13.4105L10.9182 12.7326C11.8069 12.1401 12.2655 11.0815 12.0899 10.028L11.8509 8.59367C11.5271 6.65083 9.30674 5.68892 7.6679 6.78148C7.6679 6.78147 7.6679 6.78148 7.6679 6.78148L7.30247 7.02509C7.02427 7.21056 6.85717 7.52279 6.85717 7.85714V9.57143C6.85717 14.8576 11.1424 19.1429 16.4286 19.1429H18.1429C18.4772 19.1429 18.7895 18.9758 18.9749 18.6975L19.2185 18.3321C20.3111 16.6933 19.3492 14.473 17.4064 14.1492L15.9721 13.9101C14.9185 13.7345 13.8599 14.1931 13.2674 15.0819L12.5895 16.0988C11.4815 15.4457 10.5544 14.5185 9.90127 13.4105ZM14.468 16.8865C15.0933 17.0537 15.7506 17.1429 16.4286 17.1429H17.6008C17.8104 16.7225 17.5579 16.202 17.0776 16.122L15.6433 15.8829C15.366 15.8367 15.0874 15.9574 14.9315 16.1913L14.468 16.8865Z" fill="currentColor"/>
+            </svg>
+            Whatsapp
+          </a>
+        <?php } ?>
+        <?php if (get_field('chat_link')) { ?>
+          <a href="<?php the_field('chat_link'); ?>" target="_blank" class="btn-withicon">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.71429C0 1.214 1.214 0 2.71429 0H23.2857C24.786 0 26 1.214 26 2.71429V18.1429C26 19.6431 24.786 20.8571 23.2857 20.8571H16.9638L13.8321 25.5547C13.6466 25.8329 13.3344 26 13 26C12.6656 26 12.3534 25.8329 12.1679 25.5547L9.03624 20.8571H2.71429C1.214 20.8571 0 19.6431 0 18.1429V2.71429ZM2.71429 2C2.31857 2 2 2.31857 2 2.71429V18.1429C2 18.5386 2.31857 18.8571 2.71429 18.8571H9.57143C9.90578 18.8571 10.218 19.0242 10.4035 19.3024L13 23.1972L15.5965 19.3024C15.782 19.0242 16.0942 18.8571 16.4286 18.8571H23.2857C23.6814 18.8571 24 18.5386 24 18.1429V2.71429C24 2.31857 23.6814 2 23.2857 2H2.71429ZM19 8.86162H7V6.86162H19V8.86162ZM17.2857 14.0078H8.71429V12.0078H17.2857V14.0078Z" fill="currentColor"/>
+            </svg>
+            Chat
+          </a>
+        <?php } ?>
       </div>
     </div>
   </div>

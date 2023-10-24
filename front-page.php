@@ -56,82 +56,82 @@
   <div class="container">
     <div class="services__container">
       <div class="services__item">
-        <div class="services__item-bnr" style="background-image: url('/img/geo-mixed-bg.jpg');">
-          <h2 class="title-1">EU/USA geo mixed reviews</h3>
+        <div class="services__item-bnr" style="background-image: url('<?php the_field('service1_image'); ?>');">
+          <h2 class="title-1"><?php the_field('service1_title'); ?></h2>
           <h3 class="title-1"><span>8 $</span> per 1</h3>
         </div>
         <div class="radio__btns">
           <label for="gm1" class="radio">
-            <input type="radio" id="gm1" name="gm" checked>
-            <span>1</span>
-            <span>8 $</span>
+            <input type="radio" id="gm1" name="gmt" checked>
+            <span><?php the_field('gm_1_kolvo'); ?></span>
+            <span><?php the_field('gm_1_price'); ?></span>
           </label>
           <label for="gm3" class="radio">
-            <input type="radio" id="gm3" name="gm">
-            <span>3</span>
-            <span>24 $</span>
+            <input type="radio" id="gm3" name="gmt">
+            <span><?php the_field('gm_3_kolvo'); ?></span>
+            <span><?php the_field('gm_3_price'); ?></span>
           </label>
           <label for="gm5" class="radio">
-            <input type="radio" id="gm5" name="gm">
-            <span>5</span>
-            <span>40 $</span>
+            <input type="radio" id="gm5" name="gmt">
+            <span><?php the_field('gm_5_kolvo'); ?></span>
+            <span><?php the_field('gm_5_price'); ?></span>
           </label>
           <label for="gm10" class="radio">
-            <input type="radio" id="gm10" name="gm">
-            <span>10</span>
-            <span>80 $</span>
+            <input type="radio" id="gm10" name="gmt">
+            <span><?php the_field('gm_10_kolvo'); ?></span>
+            <span><?php the_field('gm_10_price'); ?></span>
           </label>
           <label for="gm25" class="radio">
-            <input type="radio" id="gm25" name="gm">
-            <span>25</span>
-            <span>200 $</span>
+            <input type="radio" id="gm25" name="gmt">
+            <span><?php the_field('gm_25_kolvo'); ?></span>
+            <span><?php the_field('gm_25_price'); ?></span>
           </label>
           <label for="gm100" class="radio">
-            <input type="radio" id="gm100" name="gm">
-            <span>100</span>
-            <span>800 $</span>
+            <input type="radio" id="gm100" name="gmt">
+            <span><?php the_field('gm_100_kolvo'); ?></span>
+            <span><?php the_field('gm_100_price'); ?></span>
           </label>
         </div>
         <button data-fancybox href="#modal-order" class="btn" type="button">Place order</button>
       </div>
       <div class="services__item">
-        <div class="services__item-bnr" style="background-image: url('/img/geo-targeted-bg.jpg');">
-          <h2 class="title-1">Geo-Targeted reviews</h3>
+        <div class="services__item-bnr" style="background-image: url('<?php the_field('service2_image'); ?>');">
+          <h2 class="title-1"><?php the_field('service2_title'); ?></h2>
           <h3 class="title-1"><span>20 $</span> per 1</h3>
         </div>
         <div class="radio__btns">
-          <label for="gt1" class="radio">
-            <input type="radio" id="gt1" name="gt" checked>
-            <span>1</span>
-            <span>20 $</span>
+        <label for="gt1" class="radio">
+            <input type="radio" id="gt1" name="gmt">
+            <span><?php the_field('gt_1_kolvo'); ?></span>
+            <span><?php the_field('gt_1_price'); ?></span>
           </label>
           <label for="gt3" class="radio">
-            <input type="radio" id="gt3" name="gt">
-            <span>3</span>
-            <span>60 $</span>
+            <input type="radio" id="gt3" name="gmt">
+            <span><?php the_field('gt_3_kolvo'); ?></span>
+            <span><?php the_field('gt_3_price'); ?></span>
           </label>
           <label for="gt5" class="radio">
-            <input type="radio" id="gt5" name="gt">
-            <span>5</span>
-            <span>100 $</span>
+            <input type="radio" id="gt5" name="gmt">
+            <span><?php the_field('gt_5_kolvo'); ?></span>
+            <span><?php the_field('gt_5_price'); ?></span>
           </label>
           <label for="gt10" class="radio">
-            <input type="radio" id="gt10" name="gt">
-            <span>10</span>
-            <span>200 $</span>
+            <input type="radio" id="gt10" name="gmt">
+            <span><?php the_field('gt_10_kolvo'); ?></span>
+            <span><?php the_field('gt_10_price'); ?></span>
           </label>
           <label for="gt25" class="radio">
-            <input type="radio" id="gt25" name="gt">
-            <span>25</span>
-            <span>500 $</span>
+            <input type="radio" id="gt25" name="gmt">
+            <span><?php the_field('gt_25_kolvo'); ?></span>
+            <span><?php the_field('gt_25_price'); ?></span>
           </label>
           <label for="gt100" class="radio">
-            <input type="radio" id="gt100" name="gt">
-            <span>100</span>
-            <span>2000 $</span>
+            <input type="radio" id="gt100" name="gmt">
+            <span><?php the_field('gt_100_kolvo'); ?></span>
+            <span><?php the_field('gt_100_price'); ?></span>
           </label>
         </div>
-        <button data-fancybox href="#modal-order-yes" class="btn" type="button">Place order</button>
+        <button data-fancybox href="#modal-order" class="btn" type="button">Place order</button>
       </div>
     </div>
   </div>
