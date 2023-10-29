@@ -20,9 +20,9 @@
         </svg>
       </a>
     </div>
-    <div class="hero__bnr" style="background-image: url('<?php the_field('hero_bnr_bg'); ?>');">
+    <div class="hero__bnr" style="background-image: url('<?php the_field('hero_banner_bg'); ?>');">
       <div class="hero__bnr-content">
-        <h2 class="title-2"><?php the_field('hero_bnr_title'); ?></h2>
+        <h2 class="title-2"><?php the_field('hero_banner_title'); ?></h2>
       </div>
       <img src="<?php echo get_template_directory_uri(); ?>/assets/img/tp-logo-white.svg" class="hero__bnr-logo" alt=""/>
     </div>
@@ -57,81 +57,153 @@
     <div class="services__container">
       <div class="services__item">
         <div class="services__item-bnr" style="background-image: url('<?php the_field('service1_image'); ?>');">
-          <h2 class="title-1"><?php the_field('service1_title'); ?></h2>
-          <h3 class="title-1"><span>8 $</span> per 1</h3>
+          <h2 class="title-1"><?php the_field('service1_name'); ?></h2>
+          <h3 class="title-1">from <span><?php the_field('service1_from'); ?></span></h3>
         </div>
         <div class="radio__btns">
           <label for="gm1" class="radio">
-            <input type="radio" id="gm1" name="gmt" checked>
-            <span><?php the_field('gm_1_kolvo'); ?></span>
+            <input type="radio" id="gm1" name="gm" checked>
+            <span><?php the_field('gm_1_quantity'); ?></span>
             <span><?php the_field('gm_1_price'); ?></span>
+            <?php 
+              $gm_1_discount = get_field('gm_1_discount');
+              if ($gm_1_discount) {
+                echo '<p class="discount">' . $gm_1_discount . '</p>';
+              }
+            ?>
           </label>
           <label for="gm3" class="radio">
-            <input type="radio" id="gm3" name="gmt">
-            <span><?php the_field('gm_3_kolvo'); ?></span>
+            <input type="radio" id="gm3" name="gm">
+            <span><?php the_field('gm_3_quantity'); ?></span>
             <span><?php the_field('gm_3_price'); ?></span>
+            <?php 
+              $gm_3_discount = get_field('gm_3_discount');
+              if ($gm_3_discount) {
+                echo '<p class="discount">' . $gm_3_discount . '</p>';
+              }
+            ?>
           </label>
           <label for="gm5" class="radio">
-            <input type="radio" id="gm5" name="gmt">
-            <span><?php the_field('gm_5_kolvo'); ?></span>
+            <input type="radio" id="gm5" name="gm">
+            <span><?php the_field('gm_5_quantity'); ?></span>
             <span><?php the_field('gm_5_price'); ?></span>
+            <?php 
+              $gm_5_discount = get_field('gm_5_discount');
+              if ($gm_5_discount) {
+                echo '<p class="discount">' . $gm_5_discount . '</p>';
+              }
+            ?>
           </label>
           <label for="gm10" class="radio">
-            <input type="radio" id="gm10" name="gmt">
-            <span><?php the_field('gm_10_kolvo'); ?></span>
+            <input type="radio" id="gm10" name="gm">
+            <span><?php the_field('gm_10_quantity'); ?></span>
             <span><?php the_field('gm_10_price'); ?></span>
+            <?php 
+              $gm_10_discount = get_field('gm_10_discount');
+              if ($gm_10_discount) {
+                echo '<p class="discount">' . $gm_10_discount . '</p>';
+              }
+            ?>
           </label>
           <label for="gm25" class="radio">
-            <input type="radio" id="gm25" name="gmt">
-            <span><?php the_field('gm_25_kolvo'); ?></span>
+            <input type="radio" id="gm25" name="gm">
+            <span><?php the_field('gm_25_quantity'); ?></span>
             <span><?php the_field('gm_25_price'); ?></span>
+            <?php 
+              $gm_25_discount = get_field('gm_25_discount');
+              if ($gm_25_discount) {
+                echo '<p class="discount">' . $gm_25_discount . '</p>';
+              }
+            ?>
           </label>
           <label for="gm100" class="radio">
-            <input type="radio" id="gm100" name="gmt">
-            <span><?php the_field('gm_100_kolvo'); ?></span>
+            <input type="radio" id="gm100" name="gm">
+            <span><?php the_field('gm_100_quantity'); ?></span>
             <span><?php the_field('gm_100_price'); ?></span>
+            <?php 
+              $gm_100_discount = get_field('gm_100_discount');
+              if ($gm_100_discount) {
+                echo '<p class="discount">' . $gm_100_discount . '</p>';
+              }
+            ?>
           </label>
         </div>
-        <button data-fancybox href="#modal-order" class="btn" type="button">Place order</button>
+        <button data-fancybox href="#modal-order" class="btn" type="button" data-options='{"touch" : false}'>Place order</button>
       </div>
       <div class="services__item">
         <div class="services__item-bnr" style="background-image: url('<?php the_field('service2_image'); ?>');">
-          <h2 class="title-1"><?php the_field('service2_title'); ?></h2>
-          <h3 class="title-1"><span>20 $</span> per 1</h3>
+          <h2 class="title-1"><?php the_field('service2_name'); ?></h2>
+          <h3 class="title-1">from <span><?php the_field('service2_from'); ?></span></h3>
         </div>
         <div class="radio__btns">
-        <label for="gt1" class="radio">
-            <input type="radio" id="gt1" name="gmt">
-            <span><?php the_field('gt_1_kolvo'); ?></span>
+          <label for="gt1" class="radio">
+            <input type="radio" id="gt1" name="gt" checked>
+            <span><?php the_field('gt_1_quantity'); ?></span>
             <span><?php the_field('gt_1_price'); ?></span>
+            <?php 
+              $gt_1_discount = get_field('gt_1_discount');
+              if ($gt_1_discount) {
+                echo '<p class="discount">' . $gt_1_discount . '</p>';
+              }
+            ?>
           </label>
           <label for="gt3" class="radio">
-            <input type="radio" id="gt3" name="gmt">
-            <span><?php the_field('gt_3_kolvo'); ?></span>
+            <input type="radio" id="gt3" name="gt">
+            <span><?php the_field('gt_3_quantity'); ?></span>
             <span><?php the_field('gt_3_price'); ?></span>
+            <?php 
+              $gt_3_discount = get_field('gt_3_discount');
+              if ($gt_3_discount) {
+                echo '<p class="discount">' . $gt_3_discount . '</p>';
+              }
+            ?>
           </label>
           <label for="gt5" class="radio">
-            <input type="radio" id="gt5" name="gmt">
-            <span><?php the_field('gt_5_kolvo'); ?></span>
+            <input type="radio" id="gt5" name="gt">
+            <span><?php the_field('gt_5_quantity'); ?></span>
             <span><?php the_field('gt_5_price'); ?></span>
+            <?php 
+              $gt_5_discount = get_field('gt_5_discount');
+              if ($gt_5_discount) {
+                echo '<p class="discount">' . $gt_5_discount . '</p>';
+              }
+            ?>
           </label>
           <label for="gt10" class="radio">
-            <input type="radio" id="gt10" name="gmt">
-            <span><?php the_field('gt_10_kolvo'); ?></span>
+            <input type="radio" id="gt10" name="gt">
+            <span><?php the_field('gt_10_quantity'); ?></span>
             <span><?php the_field('gt_10_price'); ?></span>
+            <?php 
+              $gt_10_discount = get_field('gt_10_discount');
+              if ($gt_10_discount) {
+                echo '<p class="discount">' . $gt_10_discount . '</p>';
+              }
+            ?>
           </label>
           <label for="gt25" class="radio">
-            <input type="radio" id="gt25" name="gmt">
-            <span><?php the_field('gt_25_kolvo'); ?></span>
+            <input type="radio" id="gt25" name="gt">
+            <span><?php the_field('gt_25_quantity'); ?></span>
             <span><?php the_field('gt_25_price'); ?></span>
+            <?php 
+              $gt_25_discount = get_field('gt_25_discount');
+              if ($gt_25_discount) {
+                echo '<p class="discount">' . $gt_25_discount . '</p>';
+              }
+            ?>
           </label>
           <label for="gt100" class="radio">
-            <input type="radio" id="gt100" name="gmt">
-            <span><?php the_field('gt_100_kolvo'); ?></span>
+            <input type="radio" id="gt100" name="gt">
+            <span><?php the_field('gt_100_quantity'); ?></span>
             <span><?php the_field('gt_100_price'); ?></span>
+            <?php 
+              $gt_100_discount = get_field('gt_100_discount');
+              if ($gt_100_discount) {
+                echo '<p class="discount">' . $gt_100_discount . '</p>';
+              }
+            ?>
           </label>
         </div>
-        <button data-fancybox href="#modal-order" class="btn" type="button">Place order</button>
+        <button data-fancybox href="#modal-order" class="btn" type="button" data-options='{"touch" : false}'>Place order</button>
       </div>
     </div>
   </div>
@@ -237,6 +309,7 @@
             Telegram
           </a>
          <?php } ?>
+         
          <?php if (get_field('whatsapp_link')) { ?>
           <a href="<?php the_field('whatsapp_link'); ?>" target="_blank" class="btn-withicon">
             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -245,14 +318,12 @@
             Whatsapp
           </a>
         <?php } ?>
-        <?php if (get_field('chat_link')) { ?>
-          <a href="<?php the_field('chat_link'); ?>" target="_blank" class="btn-withicon">
-            <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.71429C0 1.214 1.214 0 2.71429 0H23.2857C24.786 0 26 1.214 26 2.71429V18.1429C26 19.6431 24.786 20.8571 23.2857 20.8571H16.9638L13.8321 25.5547C13.6466 25.8329 13.3344 26 13 26C12.6656 26 12.3534 25.8329 12.1679 25.5547L9.03624 20.8571H2.71429C1.214 20.8571 0 19.6431 0 18.1429V2.71429ZM2.71429 2C2.31857 2 2 2.31857 2 2.71429V18.1429C2 18.5386 2.31857 18.8571 2.71429 18.8571H9.57143C9.90578 18.8571 10.218 19.0242 10.4035 19.3024L13 23.1972L15.5965 19.3024C15.782 19.0242 16.0942 18.8571 16.4286 18.8571H23.2857C23.6814 18.8571 24 18.5386 24 18.1429V2.71429C24 2.31857 23.6814 2 23.2857 2H2.71429ZM19 8.86162H7V6.86162H19V8.86162ZM17.2857 14.0078H8.71429V12.0078H17.2857V14.0078Z" fill="currentColor"/>
-            </svg>
-            Chat
-          </a>
-        <?php } ?>
+        <button onclick="$crisp.push(['do', 'chat:open'])" class="btn-withicon">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 2.71429C0 1.214 1.214 0 2.71429 0H23.2857C24.786 0 26 1.214 26 2.71429V18.1429C26 19.6431 24.786 20.8571 23.2857 20.8571H16.9638L13.8321 25.5547C13.6466 25.8329 13.3344 26 13 26C12.6656 26 12.3534 25.8329 12.1679 25.5547L9.03624 20.8571H2.71429C1.214 20.8571 0 19.6431 0 18.1429V2.71429ZM2.71429 2C2.31857 2 2 2.31857 2 2.71429V18.1429C2 18.5386 2.31857 18.8571 2.71429 18.8571H9.57143C9.90578 18.8571 10.218 19.0242 10.4035 19.3024L13 23.1972L15.5965 19.3024C15.782 19.0242 16.0942 18.8571 16.4286 18.8571H23.2857C23.6814 18.8571 24 18.5386 24 18.1429V2.71429C24 2.31857 23.6814 2 23.2857 2H2.71429ZM19 8.86162H7V6.86162H19V8.86162ZM17.2857 14.0078H8.71429V12.0078H17.2857V14.0078Z" fill="currentColor"/>
+          </svg>
+          Chat
+        </button>
       </div>
     </div>
   </div>
